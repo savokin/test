@@ -7,14 +7,22 @@ window.onload = function() {
         console.log(i);
         var b2 = b[i];
         var p2 = p[i];
-        b2.onclick = function(){
-            p2.style.display = "block";
-            console.log("clicc");
-        }
+        
+
+        b2.addEventListener("click", popup_go(p2), false);
+            
+        
 
         var c2 = c[i];
+        
         c2.onclick = function(){
             p2.style.display = "none";
         }
     }
 }
+function popup_go(popup){
+    popup.style.display = "block";
+    console.log(popup);
+    console.log(b2);
+}
+function close(cl)
