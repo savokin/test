@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function(){
     var b = document.getElementsByClassName("middle-column");
     var p = document.getElementsByClassName("popup");
     var c = document.getElementsByClassName("close");
@@ -9,20 +9,28 @@ window.onload = function() {
         var p2 = p[i];
         
 
-        b2.addEventListener("click", popup_go(p2), false);
+        b2.addEventListener("click", function() {
+                popup_go(p2);
+            }
+        );
             
         
 
         var c2 = c[i];
         
-        c2.onclick = function(){
-            p2.style.display = "none";
-        }
+        c2.addEventListener("click", function() {
+                close(p2);
+            }
+        );
+    }
+
+    function popup_go(popup){
+        popup.style.display = "block";
+        console.log(popup);
+        console.log(b2);
+    }
+    function close(popup){
+        popup.style.display = "none";
+        console.log("closed");
     }
 }
-function popup_go(popup){
-    popup.style.display = "block";
-    console.log(popup);
-    console.log(b2);
-}
-function close(cl)
