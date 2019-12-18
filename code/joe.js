@@ -5,21 +5,21 @@ window.onload = function(){
     console.log("joe start");
     for(var i = 0; i < b.length; i++){
         console.log(i);
-        var b2 = b[i];
-        var p2 = p[i];
-        
+        var be = b[i];
+        var pe= p[i];
+        var ce = c[i];
 
-        b2.addEventListener("click", function() {
-                popup_go(p2);
+        be.addEventListener("click", function() {
+                popup_go(pe);
             }
         );
             
         
 
-        var c2 = c[i];
         
-        c2.addEventListener("click", function() {
-                close(p2);
+        
+        ce.addEventListener("click", function() {
+                close(pe);
             }
         );
     }
